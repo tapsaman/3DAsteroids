@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://nodes/PlayerController.gd" type="Script" id=1]
+[ext_resource path="res://nodes/SpaceShip.gd" type="Script" id=2]
+
+[node name="FirstScene" type="Node"]
+
+[node name="PlayerController" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="SpaceShip" type="Spatial" parent="PlayerController"]
+script = ExtResource( 2 )
