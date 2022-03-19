@@ -2,7 +2,8 @@ extends Node
 
 var inputVelocity = Vector2.ZERO
 var isFiring = false
-onready var playerShip = get_node("SpaceShip")
+onready var spaceShip = get_node("SpaceShip")
+onready var test = get_node("CSGTorus")
 
 func processInput():
 	inputVelocity = Vector2.ZERO
@@ -22,3 +23,6 @@ func processInput():
 
 func _process(delta):
 	processInput()
+	spaceShip.moveToVelocity(inputVelocity)
+	test.rotation.y = rad2deg(inputVelocity.angle())
+	spaceShip.toggleFire(isFiring)
