@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Challenger/glTF/Challenger.gltf" type="PackedScene" id=1]
+[ext_resource path="res://nodes/Player.gd" type="Script" id=2]
+[ext_resource path="res://nodes/Fire2.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.37307
+height = 0.423538
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 2 )
+
+[node name="Challenger" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0, 0, 0 )
+
+[node name="Fire" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.319536, 0, 0 )
+
+[node name="Gun1" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.617021, 0, 0.179881 )
+
+[node name="Gun2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.616919, 0, -0.18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.111634, 0, 0 )
+shape = SubResource( 1 )
