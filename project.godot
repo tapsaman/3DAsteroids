@@ -8,6 +8,46 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "State",
+"class": "GameStateExitingMap",
+"language": "GDScript",
+"path": "res://nodes/Game/ExitingMap.gd"
+}, {
+"base": "State",
+"class": "GameStateOpenMap",
+"language": "GDScript",
+"path": "res://nodes/Game/OpenMap.gd"
+}, {
+"base": "State",
+"class": "GameStateOpeningMap",
+"language": "GDScript",
+"path": "res://nodes/Game/OpeningMap.gd"
+}, {
+"base": "State",
+"class": "GameStateRunning",
+"language": "GDScript",
+"path": "res://nodes/Game/Running.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://nodes/StateMachine/State.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://nodes/StateMachine/StateMachine.gd"
+} ]
+_global_script_class_icons={
+"GameStateExitingMap": "",
+"GameStateOpenMap": "",
+"GameStateOpeningMap": "",
+"GameStateRunning": "",
+"State": "",
+"StateMachine": ""
+}
+
 [application]
 
 config/name="Asteroids 2"
