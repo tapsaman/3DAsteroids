@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://nodes/Game/OpeningMap.gd"
 }, {
 "base": "State",
+"class": "GameStatePaused",
+"language": "GDScript",
+"path": "res://nodes/Game/Paused.gd"
+}, {
+"base": "State",
 "class": "GameStateRunning",
 "language": "GDScript",
 "path": "res://nodes/Game/Running.gd"
@@ -43,6 +48,7 @@ _global_script_class_icons={
 "GameStateExitingMap": "",
 "GameStateOpenMap": "",
 "GameStateOpeningMap": "",
+"GameStatePaused": "",
 "GameStateRunning": "",
 "State": "",
 "StateMachine": ""
@@ -67,6 +73,11 @@ window/stretch/aspect="keep"
 [global]
 
 pixel=false
+theme=false
+
+[gui]
+
+theme/custom_font="res://assets/Matematica-Regular.otf"
 
 [input]
 

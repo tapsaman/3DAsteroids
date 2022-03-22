@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://nodes/Game/Game.gd" type="Script" id=1]
 [ext_resource path="res://nodes/StateMachine/StateMachine.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://nodes/Game/OpeningMap.gd" type="Script" id=4]
 [ext_resource path="res://nodes/Game/OpenMap.gd" type="Script" id=5]
 [ext_resource path="res://nodes/Game/ExitingMap.gd" type="Script" id=6]
+[ext_resource path="res://nodes/MainMenu/MainMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://nodes/Game/Paused.gd" type="Script" id=8]
 
 [node name="Game" type="Node"]
 pause_mode = 2
@@ -26,3 +28,6 @@ script = ExtResource( 5 )
 script = ExtResource( 6 )
 
 [node name="Paused" type="Node" parent="StateMachine"]
+script = ExtResource( 8 )
+
+[node name="MainMenu" parent="StateMachine/Paused" instance=ExtResource( 7 )]
