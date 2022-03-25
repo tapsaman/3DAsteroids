@@ -3,6 +3,8 @@ extends State
 
 func enter(_msg := {}) -> void:
 	get_tree().paused = false
+	if owner.player:
+		owner.player.scale = owner.player.defaultScale
 
 func exit():
 	get_tree().paused = true

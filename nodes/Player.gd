@@ -16,6 +16,11 @@ onready var scene = get_parent().get_node("Scene")
 onready var fireParticles = get_node("Fire").get_node("Particles")
 onready var gun1 = get_node("Gun1")
 onready var gun2 = get_node("Gun2")
+var defaultScale = null
+
+func _ready():
+	Game.player = self
+	defaultScale = scale
 
 func _physics_process(delta): 
 	input.x = Input.get_action_strength("move_forward") - Input.get_action_strength("move_back")
